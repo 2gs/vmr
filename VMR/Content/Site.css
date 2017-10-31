@@ -58,6 +58,12 @@ div#test{
         content: " ";
     }
 
+<<<<<<< HEAD
+#one,#two{
+   display: inline;
+}
+
+=======
     .item.list-group-item img {
         float: left;
     }
@@ -97,10 +103,19 @@ div#test{
 .orange{
     background-color: orange;
 }
+>>>>>>> 535046c7b95165048516c6964de01a39e3dfff37
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+}
+
+#one{
+    margin-right: 100px;
+}
+
+#two{
+    margin-left: 100px;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
