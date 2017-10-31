@@ -26,5 +26,12 @@ namespace VMR.Controllers
 
             return View();
         }
+
+        public ActionResult Sell()
+        {
+            ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
     }
 }
