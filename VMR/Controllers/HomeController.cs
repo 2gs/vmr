@@ -82,9 +82,8 @@ namespace VMR.Controllers
             {
                 sum= sum + ShoppingBag[i].Price;
             }
-
-            ViewBag.Sum = sum;
-
+            
+           ViewBag.Sum = sum;
             return View("Checkout");
 
         }
