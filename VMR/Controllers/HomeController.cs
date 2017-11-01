@@ -3,11 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using VMR.Models;
 
 namespace VMR.Controllers
 {
     public class HomeController : Controller
     {
+        public ActionResult Add(AlbumInfo item)
+        {
+            vmrdataEntities db = new vmrdataEntities();
+
+            db.AlbumInfoes.Add(item);
+
+            return View();
+        }
+
         public ActionResult Index()
         {
             return View();
@@ -22,8 +32,10 @@ namespace VMR.Controllers
 
         public ActionResult Browse()
         {
+            vmrdataEntities ORM = new vmrdataEntities();
+            List<AlbumInfo> ItemList = ORM.AlbumInfoes.ToList();
+            ViewBag.ItemList = ItemList;
             ViewBag.Message = "Your contact page.";
-
             return View();
         }
 
@@ -40,5 +52,35 @@ namespace VMR.Controllers
 
             return View();
         }
+
+        public ActionResult Cart(string AddProduct)
+        {
+            List<AlbumInfo> ShoppingBag; // reference to null 
+            if (Session["Cart"] == null)// the cart is empty! 
+            {
+                Session.Add("Cart", new List<AlbumInfo>());
+                ShoppingBag = new List<AlbumInfo>();
+            }
+            else// user has items in the cart, so go and retrive it!
+            {
+                ShoppingBag = (List<AlbumInfo>)Session["Cart"];
+            }
+            ///////////////////////////
+            vmrdataEntities DB = new vmrdataEntities();
+
+
+            AlbumInfo Option = DB.AlbumInfoes.Find(AddProduct);
+           ShoppingBag.Add(Option);
+            Session["Cart"] = ShoppingBag;// save changes you made to your cart! 
+
+            ViewBag.Cart = ShoppingBag;
+             vmrdataEntities db = new vmrdataEntities();
+            List<AlbumInfo> AllProducts = db.AlbumInfoes.ToList();
+            ViewBag.PList = AllProducts;
+            return View("Checkout");
+
+        }
+
+
     }
 }
