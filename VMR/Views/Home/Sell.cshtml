@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewBag.Title = "Sell";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Do you have any albums laying around worth cash??</h1>
+<h2>Fill out the form below and we'll contact you if you're album is worth collecting more than dust!</h2>
+
+<h2>Seller Info</h2>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Sell</title>
+
+</head>
+<body>
+
+<form class="myForm" method="get" enctype="application/x-www-form-urlencoded" action="/html/codes/html_form_handler.cfm">
+
+<p>
+<label>Name
+<input type="text" name="FirstName" required>
+</label> 
+</p>
+
+<div>
+<label>Phone 
+<input type="text" name="phone" />
+</label>
+</div>
+
+<div>
+<label>Email 
+<input type="email" name="email_address">
+</label>
+</div>
+
+<fieldset>
+<legend>Album Condition:</legend>
+<div><label class="choice"> <input type="radio" name="condition" required value="car">Like New </label></div>
+<div><label class="choice"> <input type="radio" name="condition" required value="van">A couple scratches but still works</label></div>
+</fieldset>
+<div><button>Submit</button></div>
+</form>
+
+</body>
+</html>
+

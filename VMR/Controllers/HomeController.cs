@@ -33,5 +33,12 @@ namespace VMR.Controllers
 
             return View();
         }
+
+        public ActionResult Confirm()
+        {
+            ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
     }
 }
