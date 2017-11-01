@@ -73,10 +73,18 @@ namespace VMR.Controllers
            ShoppingBag.Add(Option);
             Session["Cart"] = ShoppingBag;// save changes you made to your cart! 
 
-            ViewBag.Cart = ShoppingBag;
-             vmrdataEntities db = new vmrdataEntities();
-            List<AlbumInfo> AllProducts = db.AlbumInfoes.ToList();
-            ViewBag.PList = AllProducts;
+            ViewBag.PList = ShoppingBag;
+
+            // 
+            double sum = 0;
+
+            for (int i = 0; i <ShoppingBag.Count; i++)
+            {
+                sum= sum + ShoppingBag[i].Price;
+            }
+
+            ViewBag.Sum = sum;
+
             return View("Checkout");
 
         }

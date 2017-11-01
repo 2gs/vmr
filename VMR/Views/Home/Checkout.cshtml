@@ -8,13 +8,14 @@
 
 <h2>Checkout</h2>
 
-@for(var i=0; i< ViewBag.PList; i++){
+@foreach(var Element in ViewBag.PList){
 
-   <h1> i.Album;</h1> 
-   <h2> i.Year;</h2>
-
-
+   <h2> @Element.Album</h2> 
+   <h2> @Element.Year</h2>
 
 
+    
 }
+
+<h3> Current Total: $ @ViewBag.Sum</h3>
 
