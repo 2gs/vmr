@@ -10,19 +10,98 @@
     <div class="col-md-6">
         @foreach (var Element in ViewBag.PList)
         {
-            <h2> Album: @Element.Album</h2>
-            <h2> Year: @Element.Year</h2>
-            <h2> Price: @Element.Price </h2>
+            <h4> Album: @Element.Album</h4>
+            <h4> Year: @Element.Year</h4>
+            <h4> Price: @Element.Price </h4>
             <div class="add-delete">
-                <a class="btn btn-success" href="/Home/Delete?Album=@Element.Album">Delete</a>
+                <a class="btn primary"href="/Home/Delete?Album=@Element.Album">Delete</a>
+
+       
+                
             </div>
 
         }
 
     </div>
+  
     <div class="col-md-6">
+       <h3> Current Total: $@ViewBag.Sum</h3>
 
-        <h3> Current Total: $@ViewBag.Sum</h3>
-    </div>
+        <br />
+        <br />
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                Payment Details
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <form role="form">
+                                <div class="form-group">
+                                    <label for="Name">
+                                        Name
+                                    </label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="cardNumber" placeholder="Enter name on Card"
+                                               required autofocus />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Email">
+                                            Email
+                                        </label>
+                                        <div class="input-group">
+                                            <input type="email" class="form-control" id="cardNumber" placeholder="Enter a Valid email"
+                                                   required autofocus />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="cardNumber">
+                                                CARD NUMBER
+                                            </label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" id="cardNumber" placeholder="Valid Card Number"
+                                                       required autofocus />
+                                                <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-7 col-md-7">
+                                                <div class="form-group">
+                                                    <label for="expityMonth">
+                                                        EXPIRY DATE
+                                                    </label>
+                                                    <div class="col-xs-6 col-lg-6 pl-ziro">
+                                                        <input type="text" class="form-control" id="expityMonth" placeholder="MM" required />
+                                                    </div>
+                                                    <div class="col-xs-6 col-lg-6 pl-ziro">
+                                                        <input type="text" class="form-control" id="expityYear" placeholder="YY" required />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-5 col-md-5 pull-right">
+                                                <div class="form-group">
+                                                    <label for="cvCode">
+                                                        CV CODE
+                                                    </label>
+                                                    <input type="password" class="form-control" id="cvCode" placeholder="CV" required />
+                                                </div>
+                                            </div>
+                                        </div>
+                            </form>
+                        </div>
+                    </div>
+                    <ul class="nav nav-pills nav-stacked">
+                        <li class="active">
+                            <a href="#"><span class="badge pull-right"><span class="glyphicon glyphicon-usd"></span>@ViewBag.Sum</span> Final Payment</a>
+                        </li>
+                    </ul>
+                    <br />
+                    <a href="/Home/Confirm" class="btn btn-success btn-lg btn-block" role="button">Pay</a>
+                </div>
+            </div>
 
-</div>
+        </div>
+
+

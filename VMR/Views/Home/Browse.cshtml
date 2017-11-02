@@ -31,7 +31,7 @@
         {
             <div class="item  col-xs-4 col-lg-4">
                 <div class="thumbnail">
-                    <img class="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
+                    <img class="group list-group-image" src='@("/Content/images/" + Element.Album.Replace(" ","")+".jpg")' alt="" />
                     <div class="caption">
                         <h4 class="group inner list-group-item-heading">
                             @Element.Album
@@ -46,12 +46,12 @@
                                 </p>
                             </div>
                             <div class="col-xs-12 col-md-6">
-                                <a class="btn btn-success" href="/Home/Cart?AddProduct=@Element.Album" >Add to cart</a>
+                                <a class="btn btn-success" href="/Home/Cart?AddProduct=@Element.Album">Add to cart</a>
                             </div>
                             <div id="myModal" class="modal fade" role="dialog">
                                 <div class="modal-dialog">
 
-                                   
+
 
                                 </div>
                             </div>
@@ -61,5 +61,4 @@
             </div>
         }
     </div>
-    </div>
-
+</div>

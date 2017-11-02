@@ -248,6 +248,15 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\ABC.jpg" />
+    <Content Include="Content\images\GettinReady.jpg" />
+    <Content Include="Content\images\GoingtoaGoGo.jpg" />
+    <Content Include="Content\images\Irresistible.jpg" />
+    <Content Include="Content\images\IWantYou.jpg" />
+    <Content Include="Content\images\LoveChild.jpg" />
+    <Content Include="Content\images\MaryWellsSingsMyGuy.jpg" />
+    <Content Include="Content\images\PleaseMrPostman.jpg" />
+    <Content Include="Content\images\SongsintheKey.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
