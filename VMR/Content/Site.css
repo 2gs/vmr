@@ -134,12 +134,14 @@ textarea {
 
 
 /*CSS for Form*/
- .myForm {
+.myForm {
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-    font-size: 1em;
+    font-size: 20px;
     width: 20em;
     padding: 1em;
-    border: 50px solid #ccc;
+    border: 15px solid #2143a9;
+    margin: auto;
+    width: 500px;
 }
 
 .myForm * {
@@ -215,3 +217,8 @@ body {
 .pl-ziro {
     padding-left: 0px;
 }
+
+
+
+
+
