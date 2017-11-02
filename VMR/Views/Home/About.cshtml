@@ -1,8 +1,75 @@
-﻿@{
-    ViewBag.Title = "About";
-}
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+﻿
 
-<p>Use this area to provide additional information.</p>
+<h1 class="text-center">"Motown Est."</h1>
 
+<h2 class="text-center">The Who, When and Where:</h2>
+<h3 class="text-center">
+    Fall of 2017, three Detroiters came up with a idea to continue to recycle the sounds of classic motown hits beyond Detroit city limits. 
+    Those three Detroiters are Ernest, Serena and Trenton.  Comprised of the three, the start-up the company Motown Est. was created.  
+    They developed a website that would depict their passion for their city and exude one's love for old school music.
+    Motown Est. website allows customers to buy and sell collectable vinyl Motown albums.  The website caters to those whom have a knack for motor city soul.
+    Motown Est. accepts all major credit cards.   Currently Motown Est. only ships within the U.S.
+
+</h3>
+
+
+
+
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        Payment Details
+                    </h3>
+                     </div>
+                <div class="panel-body">
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="cardNumber">
+                                CARD NUMBER
+                            </label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="cardNumber" placeholder="Valid Card Number"
+                                       required autofocus />
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-7 col-md-7">
+                                <div class="form-group">
+                                    <label for="expityMonth">
+                                        EXPIRY DATE
+                                    </label>
+                                    <div class="col-xs-6 col-lg-6 pl-ziro">
+                                        <input type="text" class="form-control" id="expityMonth" placeholder="MM" required />
+                                    </div>
+                                    <div class="col-xs-6 col-lg-6 pl-ziro">
+                                        <input type="text" class="form-control" id="expityYear" placeholder="YY" required />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-5 col-md-5 pull-right">
+                                <div class="form-group">
+                                    <label for="cvCode">
+                                        CV CODE
+                                    </label>
+                                    <input type="password" class="form-control" id="cvCode" placeholder="CV" required />
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <ul class="nav nav-pills nav-stacked">
+                <li class="active">
+                    <a href="#"><span class="badge pull-right"><span class="glyphicon glyphicon-usd"></span>4200</span> Final Payment</a>
+                </li>
+            </ul>
+            <br />
+            <a href="http://www.jquery2dotnet.com" class="btn btn-success btn-lg btn-block" role="button">Pay</a>
+        </div>
