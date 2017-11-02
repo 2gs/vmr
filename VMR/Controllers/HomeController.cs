@@ -88,6 +88,44 @@ namespace VMR.Controllers
 
         }
 
+        public ActionResult Delete(string Album)
+        {
+            List<AlbumInfo> ShoppingBag; // reference to null 
+            if (Session["Cart"] == null)// the cart is empty! 
+            {
+                Session.Add("Cart", new List<AlbumInfo>());
+                ShoppingBag = new List<AlbumInfo>();
+            }
+            else// user has items in the cart, so go and retrive it!
+            {
+                ShoppingBag = (List<AlbumInfo>)Session["Cart"];
+            }
+
+
+            ShoppingBag.Remove(ShoppingBag.Find(x => x.Album == Album));
+
+
+            ViewBag.PList = ShoppingBag;
+            List<Double> prices = new List<Double>();
+            // 
+            double sum = 0;
+            double price = 0;
+
+            for (int i = 0; i < ShoppingBag.Count; i++)
+            {
+                sum = sum + ShoppingBag[i].Price;
+            }
+
+
+            ViewBag.Price = price;
+            ViewBag.Sum = sum;
+            return View("Checkout");
+
+
+        }
+
+
+
 
     }
 }
